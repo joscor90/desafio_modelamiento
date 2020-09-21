@@ -21,4 +21,4 @@ CREATE TABLE pruebas(id SERIAL, puntaje INT NOT NULL, profesor INT NOT NULL, PRI
 
 -- Creación de la tabla pruebas_rendidas
 
-CREATE TABLE pruebas_rendidas(id_alumno INT, id_prueba INT, FOREIGN KEY (id_alumno) REFERENCES alumnos(id), FOREIGN KEY (id_prueba) REFERENCES pruebas(id));
+CREATE TABLE pruebas_rendidas(id_alumno INT, id_prueba INT, FOREIGN KEY (id_alumno) REFERENCES alumnos(id), FOREIGN KEY (id_prueba) REFERENCES pruebas(id), PRIMARY KEY (id_alumno, id_prueba));
